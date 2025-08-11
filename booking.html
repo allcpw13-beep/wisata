@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>pariwisata banjarnegara</title>
+  <title>Booking</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
   <style>
     * {
@@ -14,17 +14,16 @@
     }
 
     body {
-      background: #f9fff8;
+      background: #f0fff4;
       color: #1b4332;
       line-height: 1.8;
       opacity: 0;
       animation: fadeIn 1s forwards;
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
+    @keyframes fadeIn { to { opacity: 1; } }
 
+    /* NAVBAR */
     nav {
       position: fixed;
       top: 0;
@@ -74,10 +73,20 @@
       height: 70px;
     }
 
+    /* FORM SECTION */
     section {
       padding: 80px 20px 60px;
       max-width: 600px;
       margin: auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: slideUp 0.8s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     h2 {
@@ -95,6 +104,13 @@
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 1em;
+      transition: border-color 0.3s;
+    }
+
+    form input:focus,
+    form textarea:focus {
+      border-color: #2d6a4f;
+      outline: none;
     }
 
     form textarea {
@@ -110,6 +126,7 @@
       cursor: pointer;
       font-weight: bold;
       transition: background 0.3s, transform 0.3s;
+      width: 100%;
     }
 
     form button:hover {
@@ -117,12 +134,14 @@
       transform: translateY(-2px);
     }
 
+    /* FOOTER */
     footer {
       background: #1b4332;
       color: white;
       text-align: center;
       padding: 40px 10px;
       font-size: 0.95em;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -137,7 +156,7 @@
   </nav>
 
   <section>
-    <h2>Form booking wisata</h2>
+    <h2>Form Pariwisata Banjarnegara</h2>
     <form>
       <input type="text" placeholder="Nama Lengkap" required />
       <input type="email" placeholder="Email" required />
@@ -150,7 +169,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 pariwisata banjarnegara | Desain oleh Kamu</p>
+    <p>&copy; 2025 Pariwisata Banjarnegara | Desain oleh Kamu</p>
   </footer>
 </body>
 </html>

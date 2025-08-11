@@ -1,2 +1,0 @@
-# wisata
-ya

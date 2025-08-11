@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Galeri wisata</title>
+  <title>galeri wisata</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
   <style>
     * {
@@ -12,7 +12,6 @@
       padding: 0;
       font-family: 'Poppins', sans-serif;
     }
-
     body {
       background: #f9fff8;
       color: #1b4332;
@@ -20,11 +19,9 @@
       opacity: 0;
       animation: fadeIn 1s forwards;
     }
-
     @keyframes fadeIn {
       to { opacity: 1; }
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -38,7 +35,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       z-index: 100;
     }
-
     nav a {
       position: relative;
       color: #1b4332;
@@ -47,7 +43,6 @@
       font-weight: 600;
       transition: all 0.3s ease;
     }
-
     nav a::after {
       content: '';
       display: block;
@@ -58,56 +53,107 @@
       border-radius: 2px;
       margin-top: 5px;
     }
-
     nav a:hover::after,
     nav a.active::after {
       width: 100%;
     }
-
     nav a:hover {
       color: #2d6a4f;
       transform: translateY(-2px);
     }
-
     body::before {
       content: "";
       display: block;
       height: 70px;
     }
-
+    .hero {
+      background: url('https://www.tripsavvy.com/thmb/3EtVPHv-EAn6LJ8kH8xKp69fqac=/2121x1414/filters:fill(auto,1)/GettyImages-500740249-5a52c2a618ba01003717aab5.jpg') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      position: relative;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .hero a {
+      position: relative;
+      z-index: 1;
+      background: #2d6a4f;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .hero a:hover {
+      background: #1b4332;
+    }
     section {
-      padding: 80px 20px 80px;
+      padding: 80px 20px;
       max-width: 1200px;
       margin: auto;
     }
-
     h2 {
-      margin-bottom: 30px;
       text-align: center;
       color: #2d6a4f;
       font-size: 2em;
+      margin-bottom: 30px;
     }
-
-    .galeri {
+    .destinasi {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
-    .galeri img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
+    .card {
+      background: white;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
-    .galeri img:hover {
-      transform: scale(1.03);
+    .card:hover {
+      transform: translateY(-5px);
       box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     }
-
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card .content {
+      padding: 15px;
+    }
+    .card h3 {
+      color: #1b4332;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.95em;
+      color: #555;
+    }
     footer {
       background: #1b4332;
       color: white;
@@ -116,23 +162,12 @@
       font-size: 0.95em;
       margin-top: 40px;
     }
-
     @media (max-width: 600px) {
-      h2 {
-        font-size: 1.5em;
+      .hero h1 {
+        font-size: 1.8em;
       }
-
-      .galeri img {
-        height: 180px;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav a {
-        margin: 6px 10px;
+      .hero p {
+        font-size: 1em;
       }
     }
   </style>
@@ -140,25 +175,48 @@
 <body>
 
   <nav>
-    <a href="index.html">Beranda</a>
+    <a href="index2.html" class="active">Beranda</a>
     <a href="paket.html">Paket</a>
-    <a href="galeri.html" class="active">Galeri</a>
+    <a href="galeri.html">Galeri</a>
     <a href="booking.html">Booking</a>
     <a href="kontak.html">Kontak</a>
   </nav>
 
+  <section class="hero">
+    <h1>Jelajahi Keindahan Banjarnegara</h1>
+    <p>Temukan pengalaman tak terlupakan di surga wisata alam Indonesia</p>
+    <a href="paket.html">Lihat Paket Wisata</a>
+  </section>
+
   <section>
-    <h2>Galeri Kegiatan</h2>
-    <div class="galeri">
-      <img src="https://www.megainsurance.co.id/po-content/uploads/wisata_pantai.jpg" alt="Pantai Bali"/>
-      <img src="https://www.teambuildingdibali.com/wp-content/uploads/2012/02/Penjelasan-Team-Building-Feature-New-2015.jpg" alt="Team building"/>
-      <img src="https://www.bukitasahbali.com/wp-content/uploads/2021/07/WhatsApp-Image-2021-03-15-at-13.23.14.jpeg" alt="Camping"/>
-      <img src="https://adv.kompas.id/wp-content/uploads/2022/06/bobocabin-1.jpg" alt="Bobocabin"/>
+    <h2>Destinasi Unggulan</h2>
+    <div class="destinasi">
+      <div class="card">
+        <img src="bukitpandang.jpeg" alt="Dieng Plateau">
+        <div class="content">
+          <h3>Dieng Plateau</h3>
+          <p>Keindahan alam pegunungan dan budaya khas dataran tinggi.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="curugpitu.jpg" alt="Curug Pitu">
+        <div class="content">
+          <h3>Curug Pitu</h3>
+          <p>Air terjun bertingkat yang mempesona dan sejuk.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="TelagaWarna.jpg" alt="Telaga Warna">
+        <div class="content">
+          <h3>Telaga Warna</h3>
+          <p>Danau indah dengan fenomena warna air yang unik.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 pariwisata banjarnegara | Desain oleh Kamu</p>
+    <p>&copy; 2025 Pariwisata Banjarnegara | Desain oleh Kamu</p>
   </footer>
 
 </body>
